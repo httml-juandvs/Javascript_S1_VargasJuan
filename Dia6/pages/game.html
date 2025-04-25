@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Low</title>
+    <link rel="shortcut icon" href="../favicons/favicon.png type="image/x-icon">
+    <link rel="stylesheet" href="../styles/game.css">
+</head>
+<body>
+    <!-- Background -->
+    <div class="bg"></div>
+    
+    <div class="container">
+        <h1>Higher or Lower</h1>
+        
+        <div class="score-container">
+            <div class="score">
+                <h2>Jugador: <span id="player-score">0</span></h2>
+            </div>
+            <div class="score">
+                <h2>CPU: <span id="cpu-score">0</span></h2>
+            </div>
+        </div>
+        
+        <!---->
+        <div class="game-area">
+            <div class="card-container">
+                <div class="card-slot">
+                    <img id="current-card" src="/placeholder.svg?height=314&width=226" alt="Carta actual">
+                </div>
+                <div class="card-slot">
+                    <img id="next-card" src="/placeholder.svg?height=314&width=226" alt="Próxima carta" class="hidden">
+                </div>
+            </div>
+            
+            <div class="message" id="message">¡Empieza el juego!</div>
+            
+            <div class="buttons" id="choice-buttons">
+                <button id="higher-btn" class="btn">Mayor ↑</button>
+                <button id="lower-btn" class="btn">Menor ↓</button>
+            </div>
+            
+            <button id="next-round-btn" class="btn hidden">Siguiente Ronda</button>
+            <button id="new-game-btn" class="btn">Nuevo Juego</button>
+           
+        </div>
+        <a href="../index.html"><button class="back">Back</button></a>
+    </div>
+
+    <script src="../script/sript.js"></script>
+</body>
+</html>
