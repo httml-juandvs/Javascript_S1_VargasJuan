@@ -5,8 +5,8 @@
 |--|--|
 | 1 |[Proyecto Pyhton a Javascript](https://httml-juandvs.github.io/Javascript_S1_VargasJuan/Dia1/index.html) |
 | 2 | [Pokédex](https://httml-juandvs.github.io/Javascript_S1_VargasJuan/Dia2/index.html) |
-  
-
+| 3 | [D1](https://httml-juandvs.github.io/Javascript_S1_VargasJuan/Dia11/index.html) |
+| 4 | [Live User](https://httml-juandvs.github.io/Javascript_S1_VargasJuan/Dia12/index.html) |
 
 ### Instalaciones
 
