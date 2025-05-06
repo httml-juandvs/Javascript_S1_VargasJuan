@@ -1,17 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://i.pinimg.com/736x/0c/91/7f/0c917f47e3a01364cd38f2b67b485f98.jpg">
-    <link rel="stylesheet" href="./styles.css/">
-    <title>My Heroe</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Mis Heroes</title>
 </head>
+
 <body>
-    
-
-
-
+    <div class="container">
+        <div class="formulario">
+            <div class="titulo">
+                <h1>Mis Heroes</h1>
+            </div>
+            <form>
+                <h2>Gestion de Heroes</h2>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre-personaje">Nombre Personaje</label>
+                        <input type="text" id="nombre-personaje" name="nombre-personaje">
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre-actor">Nombre Actor</label>
+                        <input type="text" id="nombre-actor" name="nombre-actor">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="edad-actor">Edad Actor</label>
+                        <input type="text" id="edad-actor" name="edad-actor">
+                    </div>
+                    <div class="form-group">
+                        <label for="ubicacion">Ubicacion</label>
+                        <input type="text" id="ubicacion" name="ubicacion">
+                        <small>Nombre de la ciudad de origen</small>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="poster">Poster</label>
+                        <input type="text" id="poster" name="poster">
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Ubicacion</label>
+                        <input type="date" id="fecha" name="fecha" min="1920/01/01" max="2025/12/31" value="dd/mm/yyyy">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="productora">Productora</label>
+                        <select name="productora" id="productora">
+                            <option value="Marvel">Marvel</option>
+                            <option value="DC Comics">DC Comics</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="botones">
+                    <button type="button" class="btn btn-nuevo">Nuevo Heroe</button>
+                    <button type="submit" class="btn btn-guardar">Guardar Heroe</button>
+                    <button type="button" class="btn btn-cancelar">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
