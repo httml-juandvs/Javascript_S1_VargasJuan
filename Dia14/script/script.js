@@ -30,10 +30,33 @@ document.getElementById("guardar").addEventListener("click", function(e){
 
     añadir(personaje,actor,edad,ubicacion,imagen,fecha,productora)
 })
-document.getElementById("trajecitos").addEventListener("click", function(e){
+
+document.getElementById("trajecitos").addEventListener("click", function(e) {
     e.preventDefault();
 
-    let añadir = document.getElementById("añadir_trajes")
+    let añadir = document.getElementById("añadir_trajes");
 
-    añadir.innerHTML += `<p>holaaaa</p>`
-})
+    añadir.innerHTML = `<div class="trajes">
+                            <h1>Registro de Trajes</h1>
+                            <div>
+                                <h1>Trajes del Personaje</h1>
+                                <p>
+                                    En esta sección podrás registrar cada uno de los trajes usados por el actor en sus películas.
+                                </p>
+                                <button id="new" class="botonmas">+</button>
+                                <div id="contenedor_trajes"></div>
+                            </div>
+                        </div>`;
+
+    // Agregar listener dentro del mismo bloque, ya que el elemento es dinámico
+    document.getElementById("new").addEventListener("click", function(e) {
+        e.preventDefault();
+
+        let contenedor = document.getElementById("contenedor_trajes");
+        contenedor.innerHTML += `<div class="traje">
+                                    <h2>Nombre del Traje</h2>
+                                    <input type="text" placeholder="Nombre del traje">
+                                    <button class="botoneliminar">-</button>
+                                 </div>`;
+    });
+});
