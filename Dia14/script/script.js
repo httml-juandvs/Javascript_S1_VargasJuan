@@ -5,7 +5,7 @@ function api(){
         console.log(response["data"])
     })
 }
-function añadir(personaje,actor,edad,ubicacion,imagen,fecha,productora){
+function añadir(personaje,actor,edad,ubicacion,imagen,fecha,productora,trajes){
     axios.post(link,{
         "personaje":personaje,
         "actor":actor,
@@ -13,7 +13,8 @@ function añadir(personaje,actor,edad,ubicacion,imagen,fecha,productora){
         "ubicacion":ubicacion,
         "imagen:poster":imagen,
         "fecha":fecha,
-        "productora":productora
+        "productora":productora,
+        "trajes":trajes
     })
 }
 api()
@@ -27,8 +28,18 @@ document.getElementById("guardar").addEventListener("click", function(e){
     let imagen = document.getElementById("poster").value
     let fecha = document.getElementById("fecha").value
     let productora = document.getElementById("productora").value
+    let count = 0;
+    let iterador = ``;
 
-    añadir(personaje,actor,edad,ubicacion,imagen,fecha,productora)
+    for (let i = 1; document.getElementById(`input_${i}`) !== null; i++) {
+        count++;
+        let elemento = document.getElementById(`input_${i}`);
+
+        iterador += `${i}:${elemento.value}`
+    }
+    
+
+    añadir(personaje,actor,edad,ubicacion,imagen,fecha,productora,iterador)
 })
 
 document.getElementById("trajecitos").addEventListener("click", function(e) {
@@ -48,15 +59,15 @@ document.getElementById("trajecitos").addEventListener("click", function(e) {
                             </div>
                         </div>`;
 
-    // Agregar listener dentro del mismo bloque, ya que el elemento es dinámico
+    let count = 0
     document.getElementById("new").addEventListener("click", function(e) {
         e.preventDefault();
-
+        count ++
         let contenedor = document.getElementById("contenedor_trajes");
         contenedor.innerHTML += `<div class="traje">
                                     <h2>Nombre del Traje</h2>
-                                    <input type="text" placeholder="Nombre del traje">
-                                    <button class="botoneliminar">-</button>
+                                    <input id="input_${count}"type="text" placeholder="Nombre del traje">
+                                    <button"class="botoneliminar">-</button>
                                  </div>`;
     });
 });
