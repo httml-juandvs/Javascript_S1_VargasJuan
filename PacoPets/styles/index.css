@@ -1,115 +1,177 @@
+@font-face {
+  font-family: "titulo";
+  src: url(../resources/fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: "letra";
+  src: url(../resources/fonts/Poppins-Regular.ttf);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+
 }
 
 body {
+  font-family: "letra", "titulo";
   background-color: white;
-  color: #000;
+  color: #333;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 100%;
+}
+
+
+.parte_superior {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  gap: 20px;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
   padding: 20px;
 }
 
-/* Navegación */
-div:first-of-type {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 0;
-  margin-bottom: 40px;
+.logo {
+  height: 90px;
+  margin-right: 10%;
 }
 
-div:first-of-type img {
-  height: 50px;
-}
 
-div:first-of-type a button {
+.parte_superior button {
   background: none;
   border: none;
+  font-family: "letra", "titulo";
+  font-size: 20px;
+  color: #666;
   cursor: pointer;
-  font-size: 14px;
-  padding: 8px 12px;
-  color: #333;
-  transition: color 0.3s;
+  padding: 8px 75px;
+}
+.btn_apy {
+  color: #9a8c68;
 }
 
-div:first-of-type a button:hover {
-  color: #9a9065;
+.btn_apy:hover {
+  color: #9a8c68;
 }
 
-div:first-of-type a:last-child button {
-  color: #9a9065;
-}
-
-/* Contenido principal */
-div:nth-of-type(2) {
+.parte_inferior {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 0;
+  flex-direction: column;
+  max-width: 1920px;
+  top: 40px;
+  margin: 0 auto;
+  position: relative;
+  left: -20%;
 }
 
-div:nth-of-type(2) h1 {
-  font-size: 42px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  max-width: 400px;
+.parte_inferior h1 {
+  font-size: 100px;
+  font-weight: 700px;
+  margin-bottom: 16px;
+  max-width: 600px;
 }
 
-div:nth-of-type(2) p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 30px;
-  max-width: 400px;
-  color: #333;
+.parte_inferior p {
+  font-size: 30px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 600px;
+  color: #555;
 }
 
-div:nth-of-type(2) a button {
-  background-color: #9a9065;
+.btn_comnezar{
+  background-color: #9a8c68;
   color: white;
   border: none;
-  border-radius: 20px;
-  padding: 12px 40px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  font-family: "letra";
+  padding: 12px 30px;
+  font-size: 30px;
+  font-weight: 500;
+  border-radius: 50px;
 }
 
-div:nth-of-type(2) a button:hover {
-  background-color: #827753;
+.btn_comnezar :hover {
+  background-color: #857754;
 }
 
-div:nth-of-type(2) img {
-  max-width: 50%;
+.parte_inferior img {
+  position: absolute;
+  right: -130%;
+  top: 15px;
+  max-width: 120%;
   height: auto;
 }
 
-/* Responsive */
+
+@media (max-width: 992px) {
+  .parte_superior {
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .parte_inferior {
+    padding-top: 20px;
+    min-height: auto;
+  }
+
+  .parte_inferior img {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    max-width: 100%;
+    margin-top: 40px;
+    align-self: center;
+  }
+}
+
 @media (max-width: 768px) {
-  div:first-of-type {
-    flex-direction: column;
-    align-items: flex-start;
+  .parte_superior {
+    justify-content: center;
+    gap: 10px;
   }
-  
-  div:first-of-type a {
-    margin-top: 10px;
+
+  .parte_superior button {
+    font-size: 12px;
+    padding: 6px 8px;
   }
-  
-  div:nth-of-type(2) {
+
+  .parte_inferior h1 {
+    font-size: 32px;
+  }
+
+  .parte_inferior p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .parte_superior {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .parte_inferior {
     text-align: center;
-  }
-  
-  div:nth-of-type(2) h1, 
-  div:nth-of-type(2) p {
-    max-width: 100%;
-  }
-  
-  div:nth-of-type(2) img {
-    max-width: 100%;
-    margin-top: 30px;
+    align-items: center;
   }
 }
