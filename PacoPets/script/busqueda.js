@@ -1,4 +1,4 @@
-const cpets = document.getElementById('pets-container');
+const cpets = document.getElementById('casa');
 const url = `https://api.petfinder.com/v2/animals`;
 
 function todo(){
@@ -28,24 +28,19 @@ function todo(){
     .then(response => response.json())
     .then(data => {
         console.log(data);
-      cpets.innerHTML = `
-      <div class="card">
-  <div class="card-image">
-    <img src="https://images.pexels.com/photos/349758/hummingbird-bird-birds-349758.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Foto de Coco">
-    <button class="favorite">&#9829;</button>
-  </div>
-  <div class="card-content">
-    <div class="header">
-      <h2>Coco</h2>
-      <span class="age">2 Años</span>
-    </div>
-    <p class="description">
-      Coco es un pájaro colorido que puede aprender a hablar y silbar melodías.
-    </p>
-    <button class="more-button">Conocer Más</button>
-  </div>
-</div>
-      `;
+      for (i=0;i<data.animals.length;i++){
+        let mascota = data.animals[i]
+        let imageSrc = mascota.photos[0]?.full || mascota.photos[0]?.large || mascota.photos[0]?.medium || mascota.photos[0]?.small || '';
+        cpets.innerHTML += `
+              <div class="mascota-card">
+                <img src="${imageSrc}" alt="Doberman" class="mascota-img">
+                <h3 class="mascota-nombre">${mascota.name}</h3>
+                <p class="mascota-info">${mascota.description}</p>
+                <button class="adoptar-btn">Adoptar</button>
+                <button class="favorito-btn">☆</button>
+            </div>
+            `;
+      }
     });
 })
 }

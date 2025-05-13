@@ -1,10 +1,10 @@
 @font-face {
   font-family: "titulo";
-  src: url(../resources/fonts/Montserrat-Medium.ttf);
+  src: url(../storage/fonts/Montserrat-Medium.ttf);
 }
 @font-face {
   font-family: "letra";
-  src: url(../resources/fonts/Poppins-Regular.ttf);
+  src: url(../storage/fonts/Poppins-Regular.ttf);
 }
 * {
   margin: 0;

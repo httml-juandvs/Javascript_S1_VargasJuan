@@ -1,5 +1,173 @@
-*{
+@font-face {
+    font-family: "titulo";
+    src: url(../storage/fonts/Montserrat-Medium.ttf);
+  }
+  @font-face {
+    font-family: "letra";
+    src: url(../storage/fonts/Poppins-Regular.ttf);
+  }
+
+body {
+    font-family: "titulo", "letra";
     margin: 0;
     padding: 0;
     background-color: #969269;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titulo {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.filtros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.atras{
+    background-color: white !important;
+    color: #969269 !important;
+}
+.filtros p {
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    font-size: 18px;
+    font-family: "letra";
+}
+
+.filtros button {
+    background-color: #969269;
+    border: solid white 2px;
+    border-radius: 5px;
+    padding: 8px 16px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: "letra";
+}
+
+.favoritos-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.seleccion-titulo {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+.mascotas-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.mascota-card {
+    background-color: white;
+    border-radius: 15px;
+    width: 250px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.mascota-img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.mascota-nombre {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.mascota-info {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.mascota-caracteristicas {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.caracteristica {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.caracteristica-icon {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.icon-perro {
+    background-color: #FF9800;
+}
+
+.icon-jugueton {
+    background-color: #1E88E5;
+}
+
+.icon-cariñoso {
+    background-color: #4CAF50;
+}
+
+.icon-gato {
+    background-color: #000;
+}
+
+.adoptar-btn {
+    background-color: #9e9e72;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    width: 100%;
+    cursor: pointer;
+    font-family: "letra";
+    font-size: 16px;
+}
+
+.favorito-btn {
+    position: absolute;
+    right: 15px;
+    font-family: "letra";
+    top: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
 }

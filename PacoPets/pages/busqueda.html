@@ -1,32 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PacoPets</title>
-    <link rel="shortcut icon" href="../resources/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="../storsge/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="../styles/busqueda.css">
-    <link rel="stylesheet" href="../storage/bostrap/bootstrap.min.css">
+
 </head>
 <body>
-    <div>
-        <img class="titulo" src="../resources/Green Illustrated Silhouette Cute Veterinary Clinic Logo (1) 2.svg" alt="">
+    <div class="container">
+        <div class="header">
+            <img src="../storage/Green Illustrated Silhouette Cute Veterinary Clinic Logo (1) 2.svg" alt="">
+        </div>
+        
+        <div class="filtros">
+            <a href="../index.html"><button class="atras"> < Átras </button> </a>
+            <p>Filtrar: </p> 
+            <button>Especie</button>
+            <button>Edad</button>
+            <button>Ciudad</button>  
+            <a href="./favoritos.html"><button class="favoritos-btn">☆ Favoritos</button></a>
+        </div>
+
+        <h2 class="seleccion-titulo">Selecciona tu mascota preferida:</h2>
+
+        <div id="casa" class="mascotas-container">
+<!--             
+            <div class="mascota-card">
+                <img src="" alt="Doberman" class="mascota-img">
+                <h3 class="mascota-nombre">Caicer</h3>
+                <p class="mascota-info">Doberman, joven, entrenado. NO MUERDE</p>
+                
+                <div class="mascota-caracteristicas">
+                    <div class="caracteristica">
+                        <span class="caracteristica-icon icon-perro"></span>
+                        <span>Perro</span>
+                    </div>
+                    <div class="caracteristica">
+                        <span class="caracteristica-icon icon-jugueton"></span>
+                        <span>Juguetón</span>
+                    </div>
+                </div>
+                
+                <button class="adoptar-btn">Adoptar</button>
+                <button class="favorito-btn">☆</button>
+            </div>
+            
+            
+            <div class="mascota-card">
+                <img src="" alt="Gato" class="mascota-img">
+                <h3 class="mascota-nombre">Bills</h3>
+                <p class="mascota-info">Gato, macho, de 2 años, sin enfermedades</p>
+                
+                <div class="mascota-caracteristicas">
+                    <div class="caracteristica">
+                        <span class="caracteristica-icon icon-gato"></span>
+                        <span>Gato</span>
+                    </div>
+                    <div class="caracteristica">
+                        <span class="caracteristica-icon icon-cariñoso"></span>
+                        <span>Cariñoso</span>
+                    </div>
+                </div>
+                
+                <button class="adoptar-btn">Adoptar</button>
+                <button class="favorito-btn">☆</button>
+            </div>
+            
+            
+            <div class="mascota-card">
+                <img src="" alt="Conejo" class="mascota-img">
+                <h3 class="mascota-nombre">Lupo</h3>
+                <p class="mascota-info">Conejo con 2 semanas listo para adopción</p>
+                
+                <div class="mascota-caracteristicas">
+                    <div class="caracteristica">
+                        <span class="caracteristica-icon icon-perro"></span>
+                        <span>Conejo</span>
+                    </div>
+                    <div class="caracteristica">
+                        <span class="caracteristica-icon icon-cariñoso"></span>
+                        <span>Cariñoso</span>
+                    </div>
+                </div>
+                
+                <button class="adoptar-btn">Adoptar</button>
+                <button class="favorito-btn">☆</button>
+            </div> -->
+
+        </div>
     </div>
-    <div>
-        <p>Filtrar: </p> 
-        <button>Especie</button>
-        <button>Edad</button>
-        <button>Ciudad</button>  
-        <button>☆   Favoritos</button>  
-    </div>
-    <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
 </body>
-<script src="../storage/bostrap/bootstrap.min.js"></script>
+<script src="../script/busqueda.js"></script>
 </html>
