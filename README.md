@@ -5,8 +5,8 @@
 |--|--|
 | 1 |[Proyecto Pyhton a Javascript](https://httml-juandvs.github.io/Javascript_S1_VargasJuan/Dia1/index.html) |
 | 2 | [Pokédex](https://httml-juandvs.github.io/Javascript_S1_VargasJuan/Dia2/index.html) |
-| 3 | [D1](https://httml-juandvs.github.io/Javascript_S1_VargasJuan/Dia11/index.html) |
-| 4 | [Live User](https://httml-juandvs.github.io/Javascript_S1_VargasJuan/Dia12/index.html) |
+| 3 | [Juego de Cartas](https://httml-juandvs.github.io/Javascript_S1_VargasJuan/Dia6/index.html) |
+| 4 | [Paco Pets](https://httml-juandvs.github.io/Javascript_S1_VargasJuan/PacoPets/) |
 
 ### Instalaciones
 
